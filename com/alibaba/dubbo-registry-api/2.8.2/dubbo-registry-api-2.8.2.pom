@@ -1,4 +1,4 @@
-<!-- 
+<!--
  - Copyright 1999-2011 Alibaba Group.
  -  
  - Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,21 +18,32 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.alibaba</groupId>
-		<artifactId>dubbo-parent</artifactId>
+		<artifactId>dubbo-registry</artifactId>
 		<version>2.8.2</version>
 	</parent>
-	<artifactId>dubbo-registry</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>dubbo-registry-api</artifactId>
+	<packaging>bundle</packaging>
 	<name>${project.artifactId}</name>
 	<description>The registry module of dubbo project</description>
 	<properties>
 		<skip_maven_deploy>true</skip_maven_deploy>
 	</properties>
-	<modules>
-		<module>dubbo-registry-api</module>
-		<module>dubbo-registry-default</module>
-		<module>dubbo-registry-multicast</module>
-		<module>dubbo-registry-zookeeper</module>
-		<module>dubbo-registry-redis</module>
-	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo-cluster</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo-container-api</artifactId>
+			<version>${project.parent.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>jetty</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
 </project>
