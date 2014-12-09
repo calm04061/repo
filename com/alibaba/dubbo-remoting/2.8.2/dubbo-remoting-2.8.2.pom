@@ -1,4 +1,5 @@
-<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
  - Copyright 1999-2011 Alibaba Group.
  -  
  - Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,32 +13,27 @@
  - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  - See the License for the specific language governing permissions and
  - limitations under the License.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.alibaba</groupId>
-		<artifactId>dubbo-container</artifactId>
+		<artifactId>dubbo-parent</artifactId>
 		<version>2.8.2</version>
 	</parent>
-	<artifactId>dubbo-container-logback</artifactId>
-	<packaging>jar</packaging>
+	<artifactId>dubbo-remoting</artifactId>
+	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
-	<description>The logback container module of dubbo project</description>
+	<description>The remoting module of dubbo project</description>
 	<properties>
 		<skip_maven_deploy>true</skip_maven_deploy>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>dubbo-container-api</artifactId>
-			<version>${project.parent.version}</version>
-		</dependency>
-		<dependency>
-		    <groupId>ch.qos.logback</groupId>
-		    <artifactId>logback-classic</artifactId>
-		    <scope>provided</scope>
-		</dependency>
-	</dependencies>
+	<modules>
+		<module>dubbo-remoting-api</module>
+		<module>dubbo-remoting-netty</module>
+		<module>dubbo-remoting-mina</module>
+		<module>dubbo-remoting-grizzly</module>
+		<module>dubbo-remoting-p2p</module>
+		<module>dubbo-remoting-http</module>
+		<module>dubbo-remoting-zookeeper</module>
+    </modules>
 </project>
