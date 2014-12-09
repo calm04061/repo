@@ -1,4 +1,4 @@
-<!--
+<!-- 
  - Copyright 1999-2011 Alibaba Group.
  -  
  - Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,21 +18,18 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.alibaba</groupId>
-		<artifactId>dubbo-monitor</artifactId>
+		<artifactId>dubbo-parent</artifactId>
 		<version>2.8.2</version>
 	</parent>
-	<artifactId>dubbo-monitor-api</artifactId>
-	<packaging>bundle</packaging>
+	<artifactId>dubbo-filter</artifactId>
+	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
-	<description>The monitor module of dubbo project</description>
+	<description>The filter module of dubbo project</description>
 	<properties>
 		<skip_maven_deploy>true</skip_maven_deploy>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>dubbo-rpc-api</artifactId>
-			<version>${project.parent.version}</version>
-		</dependency>
-	</dependencies>
+	<modules>
+		<module>dubbo-filter-cache</module>
+		<module>dubbo-filter-validation</module>
+	</modules>
 </project>
