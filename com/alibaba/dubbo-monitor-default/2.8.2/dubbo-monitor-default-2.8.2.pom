@@ -18,19 +18,20 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.alibaba</groupId>
-		<artifactId>dubbo-registry</artifactId>
+		<artifactId>dubbo-monitor</artifactId>
 		<version>2.8.2</version>
 	</parent>
-	<artifactId>dubbo-registry-default</artifactId>
+	<artifactId>dubbo-monitor-default</artifactId>
+	<packaging>jar</packaging>
 	<name>${project.artifactId}</name>
-	<description>The default registry module of dubbo project</description>
+	<description>The default monitor module of dubbo project</description>
 	<properties>
 		<skip_maven_deploy>true</skip_maven_deploy>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.alibaba</groupId>
-			<artifactId>dubbo-registry-api</artifactId>
+			<artifactId>dubbo-monitor-api</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
@@ -41,22 +42,9 @@
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
-			<artifactId>dubbo-rpc-injvm</artifactId>
-			<version>${project.parent.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo-remoting-netty</artifactId>
 			<version>${project.parent.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.bsf</groupId>
-			<artifactId>bsf-api</artifactId>
-			<scope>test</scope>
-			<optional>true</optional>
-		</dependency>
 	</dependencies>
-	<packaging>bundle</packaging>
 </project>
