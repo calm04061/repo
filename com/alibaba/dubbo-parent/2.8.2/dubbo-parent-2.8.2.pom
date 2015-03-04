@@ -720,7 +720,7 @@
 	<distributionManagement>
 		<repository>
 			<id>nexus</id>
-			<url>http://127.0.0.1:8081/nexus/content/repositories/dubbo/</url>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/Calm04061_maven/</url>
 		</repository>
 	</distributionManagement>
 </project>
