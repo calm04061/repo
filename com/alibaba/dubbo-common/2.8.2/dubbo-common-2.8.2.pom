@@ -77,8 +77,8 @@
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.gemini</groupId>
-			<artifactId>org.eclipse.gemini.blueprint.extender</artifactId>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
 		</dependency>
 	</dependencies>
 	<build>
