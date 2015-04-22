@@ -64,11 +64,5 @@
 			<artifactId>mina-core</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.eclipse.gemini</groupId>
-			<artifactId>
-				org.eclipse.gemini.blueprint.extender
-			</artifactId>
-		</dependency>
 	</dependencies>
 </project>
