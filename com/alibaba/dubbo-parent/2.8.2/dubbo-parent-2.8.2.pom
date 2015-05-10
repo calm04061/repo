@@ -76,7 +76,7 @@
 	</profiles>
 	<properties>
 		<!-- Common libs -->
-		<spring.bom.version>3.2.9.RELEASE</spring.bom.version>
+		<spring.bom.version>3.1.0.RELEASE</spring.bom.version>
 		<javassist_version>3.18.2-GA</javassist_version>
 		<netty_version>3.2.5.Final</netty_version>
 		<mina_version>1.1.7</mina_version>
@@ -147,6 +147,7 @@
 		<maven_deploy_plugin_version>2.7</maven_deploy_plugin_version>
 
 		<maven-surefire-plugin_version>2.17</maven-surefire-plugin_version>
+		<org.eclipse.gemini.blueprint>1.0.2.RELEASE</org.eclipse.gemini.blueprint>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -375,6 +376,16 @@
 				<artifactId>commons-pool</artifactId>
 				<version>1.6</version>
 			</dependency>
+<!-- 			<dependency> -->
+<!-- 				<groupId>org.eclipse.gemini</groupId> -->
+<!-- 				<artifactId>org.eclipse.gemini.blueprint.extender</artifactId> -->
+<!-- 				<version>${org.eclipse.gemini.blueprint}</version> -->
+<!-- 			</dependency> -->
+<!-- 			<dependency> -->
+<!-- 				<groupId>org.eclipse.gemini</groupId> -->
+<!-- 				<artifactId>org.eclipse.gemini.blueprint.core</artifactId> -->
+<!-- 				<version>${org.eclipse.gemini.blueprint}</version> -->
+<!-- 			</dependency> -->
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
@@ -393,6 +404,16 @@
 		<dependency>
 			<groupId>com.googlecode.jmockit</groupId>
 			<artifactId>jmockit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.enterprise</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>5.0.0</version>
 		</dependency>
 	</dependencies>
 	<build>
