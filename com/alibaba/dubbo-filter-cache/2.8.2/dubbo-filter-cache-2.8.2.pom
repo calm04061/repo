@@ -22,7 +22,7 @@
 		<version>2.8.2</version>
 	</parent>
 	<artifactId>dubbo-filter-cache</artifactId>
-	<packaging>jar</packaging>
+	<packaging>bundle</packaging>
 	<name>${project.artifactId}</name>
 	<description>The cache module of dubbo project</description>
 	<dependencies>

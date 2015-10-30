@@ -76,7 +76,7 @@
 	</profiles>
 	<properties>
 		<!-- Common libs -->
-		<spring.bom.version>3.1.0.RELEASE</spring.bom.version>
+		<spring.bom.version>3.2.9.RELEASE</spring.bom.version>
 		<javassist_version>3.18.2-GA</javassist_version>
 		<netty_version>3.2.5.Final</netty_version>
 		<mina_version>1.1.7</mina_version>
@@ -96,7 +96,7 @@
 		<thrift_version>0.8.0</thrift_version>
 		<jfreechart_version>1.0.13</jfreechart_version>
 		<hessian_version>4.0.7</hessian_version>
-		<servlet_version>2.5</servlet_version>
+		<servlet_version>3.1.0</servlet_version>
 		<jetty_version>6.1.26</jetty_version>
 		<validation_version>1.0.0.GA</validation_version>
 		<hibernate_validator_version>4.2.0.Final</hibernate_validator_version>
@@ -147,7 +147,6 @@
 		<maven_deploy_plugin_version>2.7</maven_deploy_plugin_version>
 
 		<maven-surefire-plugin_version>2.17</maven-surefire-plugin_version>
-		<org.eclipse.gemini.blueprint>1.0.2.RELEASE</org.eclipse.gemini.blueprint>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -261,7 +260,7 @@
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
-				<artifactId>servlet-api</artifactId>
+				<artifactId>javax.servlet-api</artifactId>
 				<version>${servlet_version}</version>
 			</dependency>
 			<dependency>
@@ -376,16 +375,6 @@
 				<artifactId>commons-pool</artifactId>
 				<version>1.6</version>
 			</dependency>
-<!-- 			<dependency> -->
-<!-- 				<groupId>org.eclipse.gemini</groupId> -->
-<!-- 				<artifactId>org.eclipse.gemini.blueprint.extender</artifactId> -->
-<!-- 				<version>${org.eclipse.gemini.blueprint}</version> -->
-<!-- 			</dependency> -->
-<!-- 			<dependency> -->
-<!-- 				<groupId>org.eclipse.gemini</groupId> -->
-<!-- 				<artifactId>org.eclipse.gemini.blueprint.core</artifactId> -->
-<!-- 				<version>${org.eclipse.gemini.blueprint}</version> -->
-<!-- 			</dependency> -->
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
@@ -404,16 +393,6 @@
 		<dependency>
 			<groupId>com.googlecode.jmockit</groupId>
 			<artifactId>jmockit</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.enterprise</artifactId>
-			<version>5.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
-			<version>5.0.0</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -513,20 +492,6 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.7</version>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-Version>${project.version}</Bundle-Version>
-						<Import-Package>
-							org.osgi.service.blueprint;version="[1.0.0,2.0.0)";resolution:=optional,
-							*
-						</Import-Package>
-					</instructions>
-					<manifestLocation>src/main/resources/META-INF</manifestLocation>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>net.flybyte.virgo</groupId>
@@ -588,6 +553,23 @@
 				</plugin>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<version>2.5.3</version>
+					<extensions>true</extensions>
+					<configuration>
+						<instructions>
+							<Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+							<Bundle-Name>${project.name}</Bundle-Name>
+							<Bundle-Version>${project.version}</Bundle-Version>
+							<Import-Package>
+								*
+							</Import-Package>
+						</instructions>
+						<manifestLocation>src/main/resources/META-INF</manifestLocation>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>

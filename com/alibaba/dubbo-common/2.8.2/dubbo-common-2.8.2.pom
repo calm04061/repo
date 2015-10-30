@@ -63,18 +63,19 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>de.javakaffee</groupId>
-			<artifactId>kryo-serializers</artifactId>
-			<version>0.27</version>
-		</dependency>
-		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
-			<version>4.3.0</version>
+			<version>5.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>de.javakaffee</groupId>
+		    <artifactId>kryo-serializers</artifactId>
+		    <version>0.30</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -82,21 +83,16 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.7</version>
-				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-Version>${project.version}</Bundle-Version>
 						<Import-Package>
-							com.alibaba.dubbo.common.serialize.support.fst;resolution:=optional,\
+							com.alibaba.dubbo.common.serialize.support.fst;resolution:=optional,
+							javassist;version="[3.18.0,3.18.2.GA)",\
 							*
 						</Import-Package>
 						<DynamicImport-Package>*</DynamicImport-Package>
 						<Bundle-Activator>com.alibaba.dubbo.common.DubboActivator</Bundle-Activator>
 					</instructions>
-					<manifestLocation>src/main/resources/META-INF</manifestLocation>
 				</configuration>
 			</plugin>
 		</plugins>
