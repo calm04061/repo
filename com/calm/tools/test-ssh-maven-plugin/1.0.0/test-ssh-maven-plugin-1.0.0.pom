@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ssh</artifactId>
+        <groupId>com.calm</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.calm.tools</groupId>
+    <artifactId>test-ssh-maven-plugin</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.calm.tools</groupId>
+                <artifactId>ssh-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <username>karaf</username>
+                    <password>karaf</password>
+                    <hostname>127.0.0.1</hostname>
+                    <port>8101</port>
+                    <script>
+                        ls
+                    </script>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
