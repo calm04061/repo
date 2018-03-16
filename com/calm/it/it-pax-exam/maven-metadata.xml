@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.calm.it</groupId>
+  <artifactId>it-pax-exam</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20180316093336</lastUpdated>
+  </versioning>
+</metadata>
