@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="task">
+    <repository>mvn:com.calm/framework-feature/0.0.10-SNAPSHOT/xml/features</repository>
+    <feature name="admin-feature" description="admin-feature" version="0.0.6.SNAPSHOT">
+        <feature version="4.1.5" prerequisite="false" dependency="true">war</feature>
+        <feature version="2.6.1" prerequisite="false" dependency="true">jpa</feature>
+        <feature version="2.0.0" prerequisite="false" dependency="true">transaction</feature>
+        <feature version="0.0.10-SNAPSHOT" prerequisite="false" dependency="true">framework-feature</feature>
+        <feature version="4.3.14.RELEASE_1" prerequisite="false" dependency="true">spring-web</feature>
+        <feature version="4.3.14.RELEASE_1" prerequisite="false" dependency="true">spring-tx</feature>
+        <feature version="2.8.4" prerequisite="false" dependency="true">jackson</feature>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:com.calm.osgi/spring-osgi-support/1.0.0-SNAPSHOT</bundle>
+        <bundle>wrap:mvn:com.calm/admin-api/0.0.6-SNAPSHOT</bundle>
+        <bundle>wrap:mvn:com.calm/admin-impl/0.0.6-SNAPSHOT</bundle>
+        <bundle>mvn:org.apache.commons/commons-lang3/3.4</bundle>
+        <bundle>wrap:mvn:com.calm/admin-restful/0.0.6-SNAPSHOT</bundle>
+    </feature>
+</features>
