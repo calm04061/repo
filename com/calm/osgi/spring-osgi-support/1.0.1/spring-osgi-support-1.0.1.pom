@@ -81,7 +81,6 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-                            org.springframework.aop,
                             *
                         </Import-Package>
                         <Bundle-UpdateLocation>
@@ -158,6 +157,7 @@
                     <!-- see goals wiki page for configuration options -->
                     <username>${git.username}</username>
                     <password>${git.password}</password>
+                    <pushReleases>false</pushReleases>
                 </configuration>
             </plugin>
         </plugins>
