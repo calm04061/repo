@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.calm.crm</groupId>
+  <artifactId>crm</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20180523.094103</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20180523094103</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.0.2-20180523.094103-1</value>
+        <updated>20180523094103</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
