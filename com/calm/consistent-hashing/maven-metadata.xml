@@ -3,12 +3,9 @@
   <groupId>com.calm</groupId>
   <artifactId>consistent-hashing</artifactId>
   <versioning>
-    <release>1.0.1</release>
     <versions>
-      <version>1.0.0</version>
-      <version>1.0.1-SNAPSHOT</version>
-      <version>1.0.1</version>
+      <version>1.0.2-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20180204084744</lastUpdated>
+    <lastUpdated>20180528141922</lastUpdated>
   </versioning>
 </metadata>
