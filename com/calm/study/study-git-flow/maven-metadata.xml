@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.calm.study</groupId>
+  <artifactId>study-git-flow</artifactId>
+  <versioning>
+    <versions>
+      <version>1.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20180903075016</lastUpdated>
+  </versioning>
+</metadata>
