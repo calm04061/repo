@@ -4,8 +4,8 @@
   <artifactId>study-git-flow</artifactId>
   <versioning>
     <versions>
-      <version>1.4-SNAPSHOT</version>
+      <version>1.4.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20180903081247</lastUpdated>
+    <lastUpdated>20180903081940</lastUpdated>
   </versioning>
 </metadata>
