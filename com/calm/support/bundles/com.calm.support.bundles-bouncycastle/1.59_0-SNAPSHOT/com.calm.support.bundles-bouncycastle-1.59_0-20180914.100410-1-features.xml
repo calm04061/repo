@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="bouncycastle">
-    <feature name="com.calm.support.bundles-bouncycastle" description="bouncycastle" version="1.59.0.0-SNAPSHOT">
-        <bundle>mvn:org.bouncycastle/bcpkix-jdk15on/1.59</bundle>
-        <bundle>mvn:org.bouncycastle/bcprov-jdk15on/1.59</bundle>
-    </feature>
-</features>
