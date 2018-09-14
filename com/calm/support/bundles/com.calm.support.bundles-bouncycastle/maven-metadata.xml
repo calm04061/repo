@@ -3,10 +3,9 @@
   <groupId>com.calm.support.bundles</groupId>
   <artifactId>com.calm.support.bundles-bouncycastle</artifactId>
   <versioning>
-    <release>1.59_0</release>
     <versions>
-      <version>1.59_0</version>
+      <version>1.59_1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20180914100555</lastUpdated>
+    <lastUpdated>20180914101654</lastUpdated>
   </versioning>
 </metadata>
