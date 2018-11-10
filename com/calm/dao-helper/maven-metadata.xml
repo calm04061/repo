@@ -4,8 +4,8 @@
   <artifactId>dao-helper</artifactId>
   <versioning>
     <versions>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0-between-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20181110064618</lastUpdated>
+    <lastUpdated>20181110064758</lastUpdated>
   </versioning>
 </metadata>
