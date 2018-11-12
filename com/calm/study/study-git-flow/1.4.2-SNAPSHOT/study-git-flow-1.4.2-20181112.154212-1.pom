@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.calm.study</groupId>
+    <artifactId>study-git-flow</artifactId>
+    <version>1.4.2-SNAPSHOT</version>
+    <name>${project.artifactId}</name>
+    <properties>
+        <!-- 文件拷贝时的编码  -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- 编译时的编码 -->
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <workflow.version>1.0.7</workflow.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.calm.workflow</groupId>
+            <artifactId>workflow-maven-plugin</artifactId>
+            <version>${workflow.version}</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://raw.githubusercontent.com/calm04061/maven/master/</url>
+            <name>github</name>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+		<repository>
+            <id>mymavenrepo</id>
+            <url>https://mymavenrepo.com/repo/hN7foHkngBEthBmTetum/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <profiles>
+        <profile>
+            <id>github</id>
+            <distributionManagement>
+                <repository>
+                    <id>github</id>
+                    <url>file:///${project.build.directory}/repo</url>
+                </repository>
+                <snapshotRepository>
+                    <id>nexus</id>
+                    <url>file:///${project.build.directory}/repo</url>
+                </snapshotRepository>
+            </distributionManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>site-maven-plugin</artifactId>
+                        <version>0.12</version>
+                        <configuration>
+                            <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+                            <noJekyll>false</noJekyll>                                  <!-- disable webpage processing -->
+                            <outputDirectory>${project.build.directory}/repo</outputDirectory> <!-- matches distribution management repository url above -->
+                            <branch>refs/heads/master</branch>                       <!-- remote branch name -->
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                            <repositoryName>maven</repositoryName>      <!-- github repo name -->
+                            <repositoryOwner>calm04061</repositoryOwner>    <!-- github username  -->
+                            <userName>calm0406@163.com</userName>
+                            <oauth2Token>${github-token}</oauth2Token>
+                            <merge>true</merge>
+                        </configuration>
+                        <executions>
+                            <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+                            <execution>
+                                <goals>
+                                    <goal>site</goal>
+                                </goals>
+                                <phase>deploy</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <build>
+        <plugins>
+			<plugin>
+                <groupId>com.calm.workflow</groupId>
+                <artifactId>workflow-maven-plugin</artifactId>
+                <version>${workflow.version}</version>
+                <configuration>
+                    <pushRemote>true</pushRemote>
+                    <skipTestProject>true</skipTestProject>
+                    <tagName>v${project.version}</tagName>
+                    <username>calm0406</username>
+                    <accessToken>${gitlab.token}</accessToken>
+                    <repository>${project.artifactId}</repository>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.calm.scm</groupId>
+                        <artifactId>git-gitlab</artifactId>
+                        <version>${workflow.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mymavenrepo</id>
+            <url>https://mymavenrepo.com/repo/hN7foHkngBEthBmTetum/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <distributionManagement>
+        <repository>
+            <id>target</id>
+            <url>${project.build.directory}/repo</url>
+        </repository>
+    </distributionManagement>
+
+</project>
