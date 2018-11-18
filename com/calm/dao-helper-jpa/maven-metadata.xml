@@ -4,8 +4,8 @@
   <artifactId>dao-helper-jpa</artifactId>
   <versioning>
     <versions>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>0.0.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20181118070953</lastUpdated>
+    <lastUpdated>20181118111453</lastUpdated>
   </versioning>
 </metadata>
