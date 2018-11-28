@@ -3,10 +3,9 @@
   <groupId>com.calm</groupId>
   <artifactId>dao-helper-it</artifactId>
   <versioning>
-    <release>0.0.0</release>
     <versions>
-      <version>0.0.0</version>
+      <version>0.0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20181118134304</lastUpdated>
+    <lastUpdated>20181128130930</lastUpdated>
   </versioning>
 </metadata>
