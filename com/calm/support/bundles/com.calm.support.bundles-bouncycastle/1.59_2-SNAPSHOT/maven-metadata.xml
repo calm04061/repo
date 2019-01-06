@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
   <groupId>com.calm.support.bundles</groupId>
-  <artifactId>com.calm.support.bundles-jackson</artifactId>
-  <version>2.9.1_5-SNAPSHOT</version>
+  <artifactId>com.calm.support.bundles-bouncycastle</artifactId>
+  <version>1.59_2-SNAPSHOT</version>
   <versioning>
     <snapshot>
       <timestamp>20190106.095736</timestamp>
@@ -12,13 +12,13 @@
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>2.9.1_5-20190106.095736-1</value>
+        <value>1.59_2-20190106.095736-1</value>
         <updated>20190106095736</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>features</classifier>
         <extension>xml</extension>
-        <value>2.9.1_5-20190106.095736-1</value>
+        <value>1.59_2-20190106.095736-1</value>
         <updated>20190106095736</updated>
       </snapshotVersion>
     </snapshotVersions>

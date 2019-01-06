@@ -4,8 +4,8 @@
   <artifactId>com.calm.support.bundles-bouncycastle</artifactId>
   <versioning>
     <versions>
-      <version>1.59_1-SNAPSHOT</version>
+      <version>1.59_2-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20190106095009</lastUpdated>
+    <lastUpdated>20190106095736</lastUpdated>
   </versioning>
 </metadata>
