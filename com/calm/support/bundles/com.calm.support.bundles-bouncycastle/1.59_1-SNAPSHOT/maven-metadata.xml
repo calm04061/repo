@@ -5,21 +5,21 @@
   <version>1.59_1-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20180914.101654</timestamp>
+      <timestamp>20190106.091105</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20180914101654</lastUpdated>
+    <lastUpdated>20190106091105</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.59_1-20180914.101654-1</value>
-        <updated>20180914101654</updated>
+        <value>1.59_1-20190106.091105-1</value>
+        <updated>20190106091105</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>features</classifier>
         <extension>xml</extension>
-        <value>1.59_1-20180914.101654-1</value>
-        <updated>20180914101654</updated>
+        <value>1.59_1-20190106.091105-1</value>
+        <updated>20190106091105</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
