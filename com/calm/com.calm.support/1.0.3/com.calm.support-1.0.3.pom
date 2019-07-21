@@ -9,7 +9,7 @@
     <version>1.0.3</version>
     <packaging>pom</packaging>
     <properties>
-        <karaf.version>4.1.5</karaf.version>
+        <karaf.version>4.2.5</karaf.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>
@@ -26,8 +26,12 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <url>file:///${deploy.dir}/repo</url>
+            <url>file:///${project.build.directory}/repo</url>
         </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>file:///${project.build.directory}/repo</url>
+        </snapshotRepository>
     </distributionManagement>
     <scm>
         <url>https://github.com/calm04061/com.calm.support.git</url>
@@ -51,25 +55,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>0.12</version>
-                <configuration>
-                    <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
-                    <noJekyll>false</noJekyll>                                  <!-- disable webpage processing -->
-                    <outputDirectory>${deploy.dir}/repo</outputDirectory> <!-- matches distribution management repository url above -->
-                    <branch>refs/heads/master</branch>                       <!-- remote branch name -->
-                    <includes>
-                        <include>**/*</include>
-                    </includes>
-                    <repositoryName>maven</repositoryName>      <!-- github repo name -->
-                    <repositoryOwner>calm04061</repositoryOwner>    <!-- github username  -->
-                    <userName>calm0406@163.com</userName>
-                    <oauth2Token>${github-token}</oauth2Token>
-                    <merge>true</merge>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>com.amashchenko.maven.plugin</groupId>
                 <artifactId>gitflow-maven-plugin</artifactId>
             </plugin>
@@ -89,4 +74,51 @@
             </plugins>
         </pluginManagement>
     </build>
+    <profiles>
+        <profile>
+            <id>github</id>
+            <distributionManagement>
+                <repository>
+                    <id>github</id>
+                    <url>file:///${project.build.directory}/repo</url>
+                </repository>
+                <snapshotRepository>
+                    <id>nexus</id>
+                    <url>file:///${project.build.directory}/repo</url>
+                </snapshotRepository>
+            </distributionManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>site-maven-plugin</artifactId>
+                        <version>0.12</version>
+                        <configuration>
+                            <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+                            <noJekyll>false</noJekyll>                                  <!-- disable webpage processing -->
+                            <outputDirectory>${project.build.directory}/repo</outputDirectory> <!-- matches distribution management repository url above -->
+                            <branch>refs/heads/master</branch>                       <!-- remote branch name -->
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                            <repositoryName>maven</repositoryName>      <!-- github repo name -->
+                            <repositoryOwner>calm04061</repositoryOwner>    <!-- github username  -->
+                            <userName>calm0406@163.com</userName>
+                            <oauth2Token>${github-token}</oauth2Token>
+                            <merge>true</merge>
+                        </configuration>
+                        <executions>
+                            <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+                            <execution>
+                                <goals>
+                                    <goal>site</goal>
+                                </goals>
+                                <phase>deploy</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
