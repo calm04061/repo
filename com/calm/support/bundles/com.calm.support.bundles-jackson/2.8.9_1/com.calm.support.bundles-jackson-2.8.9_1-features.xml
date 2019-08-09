@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="jackson">
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="jackson">
     <feature name="com.calm.support.bundles-jackson" description="com.calm.support.bundles-jackson" version="2.8.9.1">
         <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.8.9</bundle>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.8.0</bundle>
