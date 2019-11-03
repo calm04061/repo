@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="jackson">
+    <feature name="com.calm.support.bundles-jackson" description="com.calm.support.bundles-jackson" version="2.9.9.2">
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.9.9.3</bundle>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.9.9</bundle>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.9.9</bundle>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.9.9</bundle>
+        <bundle>mvn:org.yaml/snakeyaml/1.24</bundle>
+    </feature>
+</features>
