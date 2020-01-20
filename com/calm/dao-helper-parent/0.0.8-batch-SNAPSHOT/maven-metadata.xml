@@ -5,15 +5,15 @@
   <version>0.0.8-batch-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20200120.010006</timestamp>
-      <buildNumber>1</buildNumber>
+      <timestamp>20200120.010624</timestamp>
+      <buildNumber>2</buildNumber>
     </snapshot>
-    <lastUpdated>20200120010006</lastUpdated>
+    <lastUpdated>20200120010624</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>0.0.8-batch-20200120.010006-1</value>
-        <updated>20200120010006</updated>
+        <value>0.0.8-batch-20200120.010624-2</value>
+        <updated>20200120010624</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
