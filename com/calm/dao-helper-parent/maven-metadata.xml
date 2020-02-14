@@ -4,8 +4,8 @@
   <artifactId>dao-helper-parent</artifactId>
   <versioning>
     <versions>
-      <version>0.0.8-batch-SNAPSHOT</version>
+      <version>0.0.8-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20200120011734</lastUpdated>
+    <lastUpdated>20200214153817</lastUpdated>
   </versioning>
 </metadata>
