@@ -26,5 +26,11 @@ available at this repository.
             version="0.0.2">
         <idea-version since-build="213" until-build="223.*"/>
     </plugin>
+    <plugin
+            id="com.calm.redis.helper"
+            url="https://calm04061.github.io/repo/plugins/idea/redis-helper/redis-helper-0.0.3-SNAPSHOT.zip"
+            version="0.0.3">
+        <idea-version since-build="213" until-build="223.*"/>
+    </plugin>
     <!-- And so on for other plugins... -->
 </plugins>
