@@ -33,7 +33,7 @@ available at this repository.
         <idea-version since-build="213" until-build="223.*"/>
         <description>
             <![CDATA[
-
+                app
             ]]>
         </description>
         <change-notes>
