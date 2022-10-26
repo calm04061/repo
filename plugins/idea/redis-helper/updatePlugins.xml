@@ -45,4 +45,24 @@
             ]]>
         </change-notes>
     </plugin>
+    <plugin id="com.calm.redis.helper" version="0.0.3.4"
+            url="http://repo.calm0406.tk/plugins/idea/redis-helper/redis-helper-0.0.3.4.zip" >
+        <idea-version since-build="213" until-build="223.*"/>
+        <description>
+            <![CDATA[
+                Redis Helper is a Client for redis for Idea
+            ]]>
+        </description>
+        <change-notes>
+            <![CDATA[
+                <ul>
+                  <li>info</li>
+                  <li>删除key后刷新树</li>
+                  <li>Set不显示数据</li>
+                  <li>添加key刷新列表</li>
+                  <li>是否展开</li>
+                </ul>
+            ]]>
+        </change-notes>
+    </plugin>
 </plugins>
