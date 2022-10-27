@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8?
+<?xml version="1.0" encoding="UTF-8"?>
 <plugins>
 <plugin id="com.calm.redis.helper" version="0.0.3.4" url="https://repo.calm0406.tk/plugins/idea/redis-helper/redis-helper-0.0.3.4.zip" >
     <idea-version since-build="213" until-build="223.*"/>
