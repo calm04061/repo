@@ -103,6 +103,6 @@ var FindProxyForURL = function(init, profiles) {
     "+vr": function(url, host, scheme) {
         "use strict";
         if (/^127\.0\.0\.1$/.test(host) || /^::1$/.test(host) || /^localhost$/.test(host)) return "DIRECT";
-        return "SOCKS5 proxy.calm0406.com:1080; SOCKS proxy.calm0406.com:1080";
+        return "SOCKS5 proxy.calm0406.com:1080;";
     }
 });
