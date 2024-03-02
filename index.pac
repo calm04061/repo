@@ -87,7 +87,6 @@ var FindProxyForURL = function(init, profiles) {
         if (/ipfs/.test(host)) return "+vr";
         if (/sqlite/.test(host)) return "+vr";
         if (/msecnd/.test(host)) return "+vr";
-        if (/cloudflare\.com/.test(host)) return "+vr";
         if (/arduino/.test(host)) return "+vr";
         if (/rustup\.rs/.test(host)) return "+vr";
         if (/bootcdn\.net/.test(host)) return "+vr";
